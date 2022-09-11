@@ -1,0 +1,61 @@
+*,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+html{
+  background-color:darkgrey;
+  /* position: absolute; */
+}
+body>*{
+  overflow:hidden;
+}
+header{
+  background-image: url('../img/college-university-03-1020x680.jpg');
+  width: 100%;
+  padding: 1.5em;
+  text-align: center;
+  color:crimson;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+        -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+        0px 1px 0 #FFF,  0-1px 0 #FFF,
+        -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+h2{
+  margin: 2px;
+}
+section{
+  display: flex;
+  margin: 10px;
+  background-color: burlywood;
+  flex-direction: column;
+  align-items: center;
+}
+div.content{
+  background-image: url('../img/grid3.png');
+}
+p{
+  font-size: large;
+  margin-left: 30px;
+}
+p.tx-sch::before{
+  content: "学校";
+  font-family: sans-serif;
+  font-size: 25px;
+  border: 2px red solid;
+  margin: 5px 5px 10px 0;
+  background-color:aquamarine;
+}
+p.tx-osu::before{
+  content: "osu!mania";
+  font-family: serif;
+  font-size: 30px;
+  border: 2px khaki solid;
+  margin: 5px 5px 10px 0;
+  background-color:pink;
+}
+footer{
+  background-color: blanchedalmond;
+  text-align: center;
+}
