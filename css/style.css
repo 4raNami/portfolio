@@ -1,61 +1,57 @@
-*,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
+body{
+  display: grid;
+  grid-template-rows: 100px 10fr auto;
+  grid-template-columns: 1fr 10fr;
+  grid-template-areas:
+        " header .....   "
+        " nav    contents"
+        " footer .....   ";
 }
-html{
-  background-color:darkgrey;
-  /* position: absolute; */
-}
-body>*{
-  overflow:hidden;
-}
-header{
-  background-image: url('../img/college-university-03-1020x680.jpg');
-  width: 100%;
-  padding: 1.5em;
-  text-align: center;
-  color:crimson;
-  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
-        -1px 1px 0 #FFF, 1px -1px 0 #FFF,
-        0px 1px 0 #FFF,  0-1px 0 #FFF,
-        -1px 0 0 #FFF, 1px 0 0 #FFF;
-}
-h2{
-  margin: 2px;
-}
-section{
-  display: flex;
-  margin: 10px;
-  background-color: burlywood;
-  flex-direction: column;
+body>*:not(nav){
+  display: grid;
+  /* place-items: center; <- ↓を纏めた表記法*/
+  justify-items: center;
   align-items: center;
 }
-div.content{
-  background-image: url('../img/grid3.png');
+body>nav{
+  display: grid;
+  justify-items: center;
 }
-p{
-  font-size: large;
-  margin-left: 30px;
+header{
+  grid-area: header;
+  grid-column: 1 / -1;
+  background-color: #f88;
 }
-p.tx-sch::before{
-  content: "学校";
-  font-family: sans-serif;
-  font-size: 25px;
-  border: 2px red solid;
-  margin: 5px 5px 10px 0;
-  background-color:aquamarine;
+nav{
+  grid-area: nav;
+  background-color: #88f;
 }
-p.tx-osu::before{
-  content: "osu!mania";
-  font-family: serif;
-  font-size: 30px;
-  border: 2px khaki solid;
-  margin: 5px 5px 10px 0;
-  background-color:pink;
+main{
+  grid-area: contents;
+  background-color: #ff8;
+  overflow: hidden;
+  padding: 10px;
+}
+aside{
+  grid-area: aside;
+  background-color: #8f8;
 }
 footer{
-  background-color: blanchedalmond;
-  text-align: center;
+  grid-area: footer;
+  background-color: #f8f;
+  grid-column: 1 / -1;
+}
+h2 {
+  margin:10px;
+  padding: 1rem 2rem;
+  border: 3px solid #888;
+}
+h3{
+  margin:6px 6px 6px 25px;
+}
+b{
+  margin: 8px 0;
+}
+p{
+  margin-left: 25px;
 }

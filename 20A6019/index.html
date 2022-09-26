@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang ="ja">
+<head>
+<meta charset="UTF-8">
+<title>
+Web入門最終課題
+</title>
+<style>
+body{
+	line-height:1.3em;
+}
+h1{
+	background-color:skyblue;
+	padding:10px;
+	font-size:2em;
+	text-align:CENTER;
+	color:#802A2A;
+}
+img{
+	padding:2px;
+	box-shadow:5px 5px 3px royalblue;
+	float:left;
+	border:1px solid skyblue;
+}
+a:hover img{
+	box-shadow:0px 0px 0px;
+	transform: translate(5px, 5px);
+	transition:0.2s;
+}
+h2{
+	clear:left;
+	padding:6px 7px;
+	border-left:solid 6px green;
+	border-bottom:solid 3px green;
+	border-radius:15px;
+}
+a,p{
+	font-size:1.15rem;
+	text-indent:1em;
+}
+li{
+	padding:3px;
+}
+.name{
+	padding:0px;
+	border:none;
+	text-align:RIGHT;
+}
+.induction{
+	text-align:center;
+}
+table{
+	border-collapse:collapse;
+	text-align:center;
+	overflow-x:scroll;
+	width:800px;
+}
+th,
+td{
+	border: 1px solid black;
+	padding:8px;
+	white-space:nowrap;
+}
+.timeschedule tr:nth-child(odd){
+	background:#FFFF60;
+}
+.timeschedule tr:nth-child(2){
+	background:skyblue;
+}
+.timeschedule tr:nth-child(2n+4){
+	background:#FFFFCF;
+}
+.title{
+	background:royalblue;
+}
+</style>
+</head>
+<body>
+<h1>Web入門最終課題</h1>
+<a href="https://www.shonan-it.ac.jp/" target="blank"><img src="./pic/header-logo001.gif" width="173" height="35"></a>
+<h2 class="name">20A6019　大濱　慎太郎</h2>
+<h2>選んだテーマ</h2>
+<p>「好きな音楽ゲームについて紹介するページ」</p>
+<p>高校時代は週5でゲームセンターに行って音楽ゲームをしていたので、自分のやっていたゲームやその魅力について説明します。</p>
+<h2>ページ構成</h2>
+<ol>
+<li><a href="./top.html">はじめに</a><br>音楽ゲームについての説明や音楽ゲームの歴史について説明します。</li>
+<li><a href="./favoriteMusicGame.html">おすすめの音ゲー紹介</a><br>自分がよくやっている音楽ゲームを少し詳しく紹介します。</li>
+<li><a href="./matome.html">他のアーケード音ゲー</a><br>2で紹介しなかったものの名前、使用した画像のリンク、あとがきを載せます。</li>
+</ol>
+<h2>Webページの閲覧対象者</h2>
+<p>ゲーム好き、よくわからなくても音楽ゲームに興味を持ってくれる人</p>
+<h2>アピールしたい点</h2>
+<ul>
+<li>CSSの色や形を見やすいように考えて配置しました。</li>
+<li>説明をわかりやすくするために図を自作しました。</li>
+<li>アクセシビリティを考慮してid header alt captionを使用しました。</li>
+<li>著作権に十分配慮して画像を使用しました。</li>
+<li>transform,translate,transitionを学んだので使用してみました。</li>
+</ul>
+<h2>表作成課題</h2>
+<table class="timeschedule">
+<caption>大濱慎太郎の時間割</caption>
+<tr>
+	<td colspan="6" class="title">2020年度後学期</td>
+</tr>
+<tr>
+	<th></th><th id="row1">月曜</th><th id="row2">火曜</th><th id="row3">水曜</th><th id="row4">木曜</th><th id="row5">金曜</th>
+</tr>
+<tr>
+	<th rowspan="2">1限</th><td header="row1">共通基盤WS1B</td><td header="row2"></td><td header="row3"></td><td header="row4"></td><td header="row5">Web入門</td>
+</tr>
+<tr>
+	<td header="row1">佐藤</td><td header="row2"></td><td header="row3"></td><td header="row4"></td><td header="row5">井上</td>
+</tr>
+<tr>
+	<th rowspan="2">2限</th><td header="row1">共通基盤WS1B</td><td header="row2">コンピュータリテラシー応用</td><td header="row3"></td><td header="row4"></td><td header="row5"></td>
+</tr>
+<tr>
+	<td header="row1">佐藤</td><td header="row2">川上</td><td header="row3"></td><td header="row4"></td><td header="row5"></td>
+</tr>
+<tr>
+	<th rowspan="2">3限</th><td header="row1">身近なサイエンス</td><td header="row2">PL概論</td><td header="row3">英語リテラシーB</td><td header="row4"></td><td header="row5">スポーツ基礎B</td>
+</tr>
+<tr>
+	<td header="row1">本田</td><td header="row2">橘</td><td header="row3">中川</td><td header="row4"></td><td header="row5">東條</td>
+</tr>
+<tr>
+	<th rowspan="2">4限</th><td header="row1">幾何学から学ぶ</td><td header="row2">ベーシックイングリッシュ</td><td header="row3"></td><td header="row4">PL概論</td><td header="row5">コミュニケーション基礎</td>
+</tr>
+<tr>
+	<td>湯浅</td><td>ブリントン・スタット</td><td></td><td>橘</td><td>ドン・メイビン</td>
+</tr>
+<tr>
+	<th rowspan="2">5限</th><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+	<td></td><td></td><td></td><td></td><td></td>
+</tr>
+</table>
+</body>
+</html>

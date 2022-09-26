@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      body{
+        display: grid;
+        grid-template-rows: 100px 10fr 1fr;
+        grid-template-columns: 2fr 10fr 1fr;
+        grid-template-areas:
+              " header header   header "
+              " nav    contents aside  "
+              " footer .....    .....  ";
+      }
+      body>*{
+        display: grid;
+        /* place-items: center; <- ↓を纏めた表記法*/
+        justify-items: center;
+        align-items: center;
+      }
+      header{
+        grid-area: header;
+        background-color: #f00;
+      }
+      nav{
+        grid-area: nav;
+        background-color: #00f;
+      }
+      main{
+        grid-area: contents;
+        background-color: #ff0;
+        overflow: hidden;
+      }
+      aside{
+        grid-area: aside;
+        background-color: #0f0;
+      }
+      footer{
+        grid-area: footer;
+        background-color: #f0f;
+        grid-column: 1 / -1;
+      }
+    </style>
+  </head>
+  <body>
+    <header>HEADER</header>
+    <nav>
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+    <main>
+      CONTENTSCONTENTSCONTENTSCONTENTSCONTENTSCONTENTSCONTENTSCONTENTS<br>
+      CONTENTS<br>
+      CONTENTS<br>
+      CONTENTS<br>
+      CONTENTS<br>
+      CONTENTS<br>
+    </main>
+    <aside>ASIDE</aside>
+    <footer>FOOTER</footer>
+  </body>
+</html>
