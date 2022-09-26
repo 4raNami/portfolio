@@ -1,7 +1,7 @@
 body{
   display: grid;
   grid-template-rows: 100px 10fr auto;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 2fr 10fr;
   grid-template-areas:
         " header .....   "
         " nav    contents"
@@ -20,38 +20,93 @@ body>nav{
 header{
   grid-area: header;
   grid-column: 1 / -1;
-  background-color: #f88;
+  background-color: coral;
+  font-size: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 nav{
   grid-area: nav;
-  background-color: #88f;
+  padding: 2px;
+  background-color: beige;
 }
 main{
   grid-area: contents;
-  background-color: #ff8;
+  background: -moz-linear-gradient(top, rgb(155, 213, 240), #5bb3e6);
+  background: -webkit-linear-gradient(top, rgb(155, 213, 240), #5bb3e6);
+  background: linear-gradient(to bottom, rgb(155, 213, 240), #5bb3e6);
   overflow: hidden;
   padding: 10px;
 }
-aside{
-  grid-area: aside;
-  background-color: #8f8;
+section{
+  background-color: aliceblue;
 }
 footer{
   grid-area: footer;
-  background-color: #f8f;
   grid-column: 1 / -1;
+  background-color: darkkhaki;
 }
 h2 {
   margin:10px;
   padding: 1rem 2rem;
-  border: 3px solid #888;
+  border: 3px solid #444;
 }
-h3{
+h2.annual{
+  background-color: antiquewhite ;
+}
+h3,h4{
+  border-bottom: 3px dotted #000;
   margin:6px 6px 6px 25px;
 }
-b{
-  margin: 8px 0;
-}
 p{
-  margin-left: 25px;
+  margin: 8px 8px 8px 25px;
+}
+ul:not(#deep1) {
+  border: solid 2px #ffb03f;
+  padding: 0 0.5em;
+  position: relative;
+}
+
+ul:not(#deep1) li {
+  line-height: 1.5;
+  padding: 0.5em 0 0.5em 1.4em;
+  border-bottom: dashed 1px silver;
+  list-style-type: none!important;
+}
+
+ul:not(#deep1) li:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f075";/*アイコン種類*/
+  position: absolute;
+  left : 0.5em; /*左端からのアイコンまで*/
+  color: #ffb03f; /*アイコン色*/
+}
+
+ul:not(#deep1) li:last-of-type {
+  border-bottom: none;
+}
+
+ul#deep1 {
+  box-shadow :0px 0px 3px silver;
+  border: solid 1px whitesmoke;
+  padding: 0.5em 1em 0.5em 2.3em;
+  position: relative;
+  background: #fafafa;
+}
+
+ul#deep1 li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+  list-style-type: none!important;
+}
+
+ul#deep1 li:before {
+  font-family: FontAwesome;
+  content: "\f0da";
+  position: absolute;
+  left : 1em; /*左端からのアイコンまで*/
+  color: gray; /*アイコン色*/
+}
+
+iframe{
+  padding-left: 16px;
 }
